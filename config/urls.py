@@ -17,6 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+def home(request):
+    return HttpResponse("Thanumania works!")
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', home),
 ]
